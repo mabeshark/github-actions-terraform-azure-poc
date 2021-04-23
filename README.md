@@ -23,7 +23,7 @@ az storage container create -n $STORAGE_ACCOUNT_CONTAINER --account-name $STORAG
 2. Create an Azure service principal with access to your subscription using the command below. Save the generated Client ID and Client Secret in your repository Secrets:
 
 ````
-az ad sp create-for-rbac --name "github-actions-terraform-poc-spn" --role Contributor --scopes /subscriptions/$SUBSCRIPTION_ID/ --sdk-auth
+az ad sp create-for-rbac --name "github-actions-terraform-poc-spn" --role Contributor --scopes /subscriptions/$SUBSCRIPTION_ID --sdk-auth
 `````
 
 3. Edit the GitHub Actions workflows as needed, [terraform-plan.yml](.github/workflows/terraform-plan.yml) and [terraform-apply.yml](.github/workflows/terraform-apply.yml)
