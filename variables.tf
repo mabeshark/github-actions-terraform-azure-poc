@@ -3,7 +3,7 @@ variable location {
 }
 
 variable resource_group_name {
-    default = "github-actions-terraform-poc-rg"
+    default = "github-actions-terraform-created-rg"
 }
 
 
