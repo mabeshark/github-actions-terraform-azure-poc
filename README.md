@@ -27,6 +27,8 @@ az ad sp create-for-rbac --name "github-actions-terraform-poc-spn" --role Contri
 `````
 
 3. Edit the GitHub Actions workflows as needed, [terraform-plan.yml](.github/workflows/terraform-plan.yml) and [terraform-apply.yml](.github/workflows/terraform-apply.yml)
+4. Create Secrets in your GitHub repository for the environment variables in the yaml files from step #3.
+5. Configure branch protection policies in your GitHub repository on the "main" branch to require terraform status checks to pass for all pull requests.
 
 
 ### Testing
