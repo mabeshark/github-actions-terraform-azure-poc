@@ -17,5 +17,3 @@ az storage container create -n $STORAGE_ACCOUNT_CONTAINER --account-name $STORAG
 
 az ad sp create-for-rbac --name "github-actions-terraform-poc-spn" --role Contributor --scopes /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP_NAME --sdk-auth
 ````
-
-2. Update backend.tf with the resource group, storage account, and container name from above
