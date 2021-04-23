@@ -4,7 +4,7 @@ This is a POC to demo using GitHub Actions with Terraform code to deploy Infrasa
 
 ### Prerequisites
 
-1. Create a resource group, storage account, and container for the Terraform remote state
+1. Create a resource group, storage account, and container for the Terraform remote state:
 
 ````
 SUBSCRIPTION_ID=$(az account show --query id --output tsv)
@@ -20,7 +20,7 @@ az storage account create -n $STORAGE_ACCOUNT_NAME -g $RESOURCE_GROUP_NAME -l $R
 az storage container create -n $STORAGE_ACCOUNT_CONTAINER --account-name $STORAGE_ACCOUNT_NAME
 ````
 
-2. Create an Azure service principal with access to your subscription using the command below. Save the generated Client ID and Client Secret in your repository Secrets.
+2. Create an Azure service principal with access to your subscription using the command below. Save the generated Client ID and Client Secret in your repository Secrets:
 
 ````
 az ad sp create-for-rbac --name "github-actions-terraform-poc-spn" --role Contributor --scopes /subscriptions/$SUBSCRIPTION_ID/ --sdk-auth
