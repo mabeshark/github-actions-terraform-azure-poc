@@ -10,7 +10,7 @@ This is a POC to demo using GitHub Actions with Terraform code to deploy Infrasa
 SUBSCRIPTION_ID=$(az account show --query id --output tsv)
 RESOURCE_GROUP_NAME="github-actions-terraform-poc-rg"
 RESOURCE_GROUP_LOCATION="eastus"
-STORAGE_ACCOUNT_NAME="mabegithubtfstatestore"
+STORAGE_ACCOUNT_NAME="<PROVIDE A GLOBALLY UNIQUE STORAGE ACCOUNT NAME>"
 STORAGE_ACCOUNT_CONTAINER="terraform-state"
 
 az group create -g $RESOURCE_GROUP_NAME -l $RESOURCE_GROUP_LOCATION
